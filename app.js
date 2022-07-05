@@ -7,10 +7,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-
-app.get("/hello", (req, res) => {
-  res.send("Task Manager App");
-});
+app.use(express.static('public'))
 
 app.use("/api/v1/tasks", tasks);
 
